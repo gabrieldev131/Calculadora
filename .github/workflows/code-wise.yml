@@ -3,7 +3,7 @@ name: Code Wise
 on:
     pull_request:  # Executa apenas quando há um Pull Request
       branches:
-        - developing  # Define a branch 'developing'
+        - main  # Define a branch 'developing'
 
 permissions: write-all
 
