@@ -1,7 +1,6 @@
 package com.br.proj.calc.model.factories;
 
 import java.lang.reflect.InvocationTargetException;
-import com.br.proj.calc.model.operation.contracts.*;
 import com.br.proj.calc.model.exception.*;
 
 public class AbstractFactory<T> implements IFactory <T>{
