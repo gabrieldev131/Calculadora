@@ -1,9 +1,9 @@
 name: Code Wise
 
 on:
-    pull_request:  # Executa apenas quando há um Pull Request
-      branches:
-        - main  # Define a branch 'developing'
+  pull_request:  # Executa apenas quando há um Pull Request
+    branches:
+      - main  # Define a branch 'developing'
 
 permissions: write-all
 
@@ -25,7 +25,9 @@ jobs:
           sudo apt-get install jq
           pip install requests
           pip install agentops  
-
+      
+      - name: Test
+        run: echo "Test step to verify action is triggered"
        
 
           
