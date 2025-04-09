@@ -3,7 +3,7 @@ name: Code Wise
 on:
   pull_request:  # Executa apenas quando há um Pull Request
     branches:
-      - main  # Define a branch 'developing'
+      - developing  # Define a branch 'developing'
 
 permissions: write-all
 
@@ -25,15 +25,18 @@ jobs:
           sudo apt-get install jq
           pip install requests
           pip install agentops  
+          pip install pydantic
           
       - name: Run AgentOps Monitoring
         env:
             AGENTOPS_API_KEY: ${{ secrets.AGENTOPS_API_KEY }}
         run: |
             python -c "
+            import os
             import agentops
-            agentops.init($AGENTOPS_API_KEY)
+            agentops.init(os.environ['AGENTOPS_API_KEY'])
             "
+
                 
       - name: Get committer's name
         id: get-committer
