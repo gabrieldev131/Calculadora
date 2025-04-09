@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 import com.br.proj.calc.model.exception.*;
 
 public class AbstractFactory<T> implements IFactory <T>{
-
+//oi
     protected String pacoteBase = "com.br.proj.calc.model.";
     @Override
     public T criar(String opcao) throws OperacaoInvalidaException {

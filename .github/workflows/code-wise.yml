@@ -25,7 +25,12 @@ jobs:
           sudo apt-get install jq
           pip install requests
           pip install agentops  
-      
+
+      - name: Test
+        run: |
+          echo "Content sent for analysis: " 
+
+          
       - name: Run AgentOps Monitoring
         env:
             AGENTOPS_API_KEY: ${{ secrets.AGENTOPS_API_KEY }}
