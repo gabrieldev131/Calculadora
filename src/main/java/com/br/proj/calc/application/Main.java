@@ -16,7 +16,7 @@ public class Main {
 
         while (continuar) {
             try {
-                menu.show();
+                Menu.show();
                 RequestDTO requestDTO = menu.retriveValue();
                 ResponseDTO responseDTO = controllerCalc.calcular(requestDTO);
                 menu.showResults(responseDTO);
