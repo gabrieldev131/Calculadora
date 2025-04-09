@@ -25,10 +25,6 @@ jobs:
           sudo apt-get install jq
           pip install requests
           pip install agentops  
-      
-      
-       
-
           
       - name: Run AgentOps Monitoring
         env:
