@@ -26,8 +26,7 @@ jobs:
           pip install requests
           pip install agentops  
       
-      - name: Test
-        run: echo "Test step to verify action is triggered"
+      
        
 
           
