@@ -25,9 +25,11 @@ jobs:
             AGENTOPS_API_KEY: ${{ secrets.AGENTOPS_API_KEY }}
         run: |
             python -c "
+            import os
             import agentops
-            agentops.init($AGENTOPS_API_KEY)
+            agentops.init(os.environ['AGENTOPS_API_KEY'])
             "
+
                 
       - name: Get committer's name
         id: get-committer
